@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+#siteContainer{
+	max-width:auto;
+	background-color: #f3ecde;
+	padding:0px;
+}
+
+/*.................................Header All Pages................................*/
+#topBar{
+	width: auto;
+	height:35px;
+	background-color:#3c3a35;
+}
+
+#header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height:392px;
+	width: auto;
+	background-image: url("../images/heroCrackedOpen.jpg");
+	margin-bottom:20px;
+}
+
+#headerLogo{
+	
+	height: 300px;
+
+	margin: 40px auto 0px; 
+
+}
+
+#headerNav {
+
+	height:70px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+}
+
+.headerButton  {
+
+	display: flex;
+	flex-direction: column;
+	margin:auto;
+	color:  #f3ecde;
+	font-family: 'Merriweather', serif;
+	font-size: 1.4vw;
+	padding:10px;
+	margin-left: 40px;
+	margin-right: 40px;
+	text-decoration:none;
+
+}
+
+
+#imgCycler{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: auto;
+	background-color:#f3ecde;
+
+}
+
+.imgButtons{
+	border-radius: 5px;
+	margin: 10px 20px 30px;
+	height: 42px;
+	background-color: #ffbd2e;
+}
+
+.imgButtons:hover{
+	background-color:  #ffcd1e;
+	transform: translate(0, -1px);
+}
+/*........................ Header all pages End..........................*/
+
+
+/*................Index..................Index..................Index.....................*/
+#adHeadline1{
+	padding:5vw 15vw;
+	background-color: #3c3a35;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+
+}
+
+
+#headlineText{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-content: center;
+	text-align: center;
+
+}
+
+.headline1{
+	font-size: 4vw;
+	font-family: 'Oswald', sans-serif;
+	color: #f3ecde;
+}
+
+
+
+#headline2{
+	font-size: 65px;
+	text-align: center;
+	margin-top:35px;
+	margin-bottom: 10px;
+	font-family: 'Galada', cursive;
+	color:#ffbd2e;
+
+}
+
+#headlineImages{
+	height: 1vw;
+
+	animation-duration: 1.5s;
+	animation-name: appear;
+}
+
+@keyframes appear{
+	from {
+		opacity: 0.1;
+		margin-top:-40px;
+	}
+
+	to {
+		opacity: 1;
+		margin-top:0px;
+	}
+}
+
+#headlineImages img{
+	max-width: 18vw;
+	width:100%;
+}
+
+#adHeadline2{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 0px 150px;
+}
+
+#adButton {
+	font-family: 'Oswald', sans-serif;
+	margin-top: 2vw ;
+	margin-bottom: 5vw;
+	font-size: 2vw;
+	text-decoration:none;
+	padding: 15px;
+	color:#3c3a35;
+	border-radius: 15px;
+	border:2px dashed #3c3a35 ;
+
+}
+
+#adButton:hover{
+	background-color: #f2eaae;
+	transform: translate(0, -1px);
+}
+
+#certifications{
+	background-image: url("../images/quality.jpg");
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0px 15vw;
+}
+
+
+
+
+#certRight{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 510px;
+	text-align: right;
+
+}
+
+#certText{
+	font-size: 1.7vw;
+	line-height: 1.6vw;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	color:#f3ecde;;
+}
+
+#certButton {
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	margin: 40px;
+	font-size: 2.2vw;
+	text-decoration:none;
+	padding: 15px;
+	color:#f3ecde;
+	border-radius: 15px;
+	border:2px dashed #f3ecde;
+
+}
+
+#certButton:hover{
+	background-color:  rgba(255, 190, 48, 0.5);
+	transform: translate(0, -1px);
+
+}
+
+#certHeadline{
+	margin:20px;
+}
+
+#qualitySafe{
+
+	margin-top: 20px;
+	font-size: 4.5vw;
+	font-family: 'Oswald', sans-serif;
+	color: #f3ecde;
+
+}
+
+#guareggteed{
+	font-size: 6vw;
+	margin-top:35px;
+	margin-bottom: 10px;
+	font-family: 'Galada', cursive;
+	color:#ffbd2e;
+}
+
+
+
+@media screen and (max-width: 830px){
+
+	#headlineImages img:last-child {
+		display: none;
+	}
+
+	#headlineImages img{
+		max-width:28vw;
+	}
+
+	#adHeadline1{
+		padding:5vw 9vw;
+	}
+
+
+
+
+	#imgCycler{
+		flex-direction: column;
+		animation-duration: 2s;
+		animation-name: navSlider; 
+	}
+
+	.imgButtons{
+		animation-duration: 2s;
+		/*animation-name: navSlider;*/
+	}
+
+
+	@keyframes navSlider{
+	from {
+		height: 0%;
+
+	}
+
+	to {
+		height: 100%;
+	}
+	}
+
+	.headerButton{
+		font-size: 2.5vw;
+		text-align: center;
+	}
+
+
+
+
+}
+
+@media screen and (max-width: 650px){
+
+}
+
+/*........................................index End...............................................*/
+
+
+
+
+/*................................Footer all pages................................................*/
+#footer{
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 180px;
+	background-color: #343434;
+	padding: 25px;
+	margin-top:100px;
+}
+
+
+.footerNav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 510px;
+	margin:auto 55px;
+}
+
+
+.footerNavButtons{
+	width:42px;
+	height: 42px;
+	background-color: #f3ecde;
+
+	border-radius: 5px;
+
+}
+
+/*..............................Footer all pages End...............................................*/
