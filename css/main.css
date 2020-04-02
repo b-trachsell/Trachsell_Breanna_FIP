@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #siteContainer{
-	max-width:auto;
+	max-width: 1920px;
 	background-color: #f3ecde;
 	padding:0px;
 }
@@ -9,8 +9,55 @@
 /*.................................Header All Pages................................*/
 #topBar{
 	width: auto;
-	height:35px;
+	height: 9vh;
 	background-color:#3c3a35;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	z-index: 5;
+}
+
+#hamburger{
+	
+	padding: 2px;
+	padding-right: 6px;
+	display: none;
+
+}
+
+#hamburger:hover {
+	cursor: pointer;
+}
+
+
+#hamburger:hover .lines{
+	background-color: #ffbd2e;
+}
+
+.lines{
+	background-color: #f3ecde;
+	width: 30px;
+	height: 5px;
+	margin:  3px 5px;
+
+}
+
+#hamburgerMenu{
+	position: fixed;
+	z-index: 5;
+	left: auto;
+	right: 0px;
+	bottom: 0;
+	height: 91vh;
+	width: 300px;
+	background-color: #f3ecde;
+
+}
+
+#hamburgerMenu .imgButtons{
+	display: flex;
+	text-align: center;
 }
 
 #header{
@@ -42,14 +89,15 @@
 .headerButton  {
 
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: center;
 	margin:auto;
 	color:  #f3ecde;
 	font-family: 'Merriweather', serif;
-	font-size: 1.4vw;
-	padding:10px;
-	margin-left: 40px;
-	margin-right: 40px;
+	font-size: 16px;
+	padding:9px;
+	margin-left: 4vw;
+	margin-right: 4vw;
 	text-decoration:none;
 
 }
@@ -167,7 +215,7 @@
 }
 
 #certifications{
-	background-image: url("../images/quality.jpg");
+	background-color: #3c3a35;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -236,59 +284,7 @@
 
 
 
-@media screen and (max-width: 830px){
 
-	#headlineImages img:last-child {
-		display: none;
-	}
-
-	#headlineImages img{
-		max-width:28vw;
-	}
-
-	#adHeadline1{
-		padding:5vw 9vw;
-	}
-
-
-
-
-	#imgCycler{
-		flex-direction: column;
-		animation-duration: 2s;
-		animation-name: navSlider; 
-	}
-
-	.imgButtons{
-		animation-duration: 2s;
-		/*animation-name: navSlider;*/
-	}
-
-
-	@keyframes navSlider{
-	from {
-		height: 0%;
-
-	}
-
-	to {
-		height: 100%;
-	}
-	}
-
-	.headerButton{
-		font-size: 2.5vw;
-		text-align: center;
-	}
-
-
-
-
-}
-
-@media screen and (max-width: 650px){
-
-}
 
 /*........................................index End...............................................*/
 
@@ -301,12 +297,21 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	height: 180px;
 	background-color: #343434;
 	padding: 25px;
 	margin-top:100px;
 }
 
+#footerCopyR{
+	font-size: 12px;
+	line-height: 16px;
+	color: #f3ecde;
+	font-family: 'Merriweather', serif;
+	padding-left: 35px;
+
+}
 
 .footerNav{
 	display: flex;
@@ -327,3 +332,165 @@
 }
 
 /*..............................Footer all pages End...............................................*/
+
+@media screen and (max-width: 830px){
+
+	#headlineImages img:last-child {
+		display: none;
+	}
+
+	#headlineImages img{
+		max-width:28vw;
+	}
+
+	#adHeadline1{
+		padding:5vw 9vw;
+	}
+
+	#topBar{
+		position: fixed;
+		width: 100%;
+	}
+
+	#header{
+		padding-top:  9vh;
+	}
+
+	#imgCycler{
+		height: 45px;
+	}
+
+	.imgButtons{
+		display: none;	}
+
+
+	#hamburger{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.headerButton{
+		font-size: 2.5vw;
+		text-align: center;
+	}
+
+	#certifications{
+		padding: 0 5vw;
+	}
+
+	#qualitySafe{
+		font-size: 7.5vw ;
+	}
+
+	#guareggteed{
+		font-size: 10vw ;
+	}
+
+	#certButton{
+		margin:20px;
+		padding: 10px;
+	}
+
+	#certText{
+		font-size: 2.5vw;
+		line-height: 17px;
+		margin-bottom: 0px;
+	}
+
+	.footerNav{
+		margin:auto;
+	}
+
+
+
+
+}
+
+@media screen and (max-width: 650px){
+
+	#hamburgerMenu  .imgButtons{
+		margin-top:50px;
+	}
+
+	.headerButton{
+		 font-size: 16px;
+		 margin:auto;
+	}
+
+	#adHeadline1{
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		height: 85vw;
+		padding: 20px;
+
+
+	}
+
+
+
+	#headlineText p:first-child {
+		margin-bottom:20px;
+	}
+
+	#headlineText p {
+		margin: 3px;
+
+	}
+
+	.headline1{
+		font-size: 8vw;
+	}
+
+	#headlineImages{
+		margin:auto;
+		margin-top: 40px;
+	}
+
+	#headlineImages img{
+		max-width: 50vw;
+	}
+
+	#adButton{
+		position: relative;
+		bottom: 53vw;
+		left: 10vw;
+		font-size: 4vw;
+		color: #f3ecde;
+		border-color: #f3ecde;
+	}
+
+	#adButton:hover{
+		background-color: rgba(255, 190, 48, 0.5);
+	}
+
+	#certifications{
+		padding: 0 5vw;
+	}
+
+	#qualitySafe{
+		font-size: 10vw ;
+	}
+
+	#guareggteed{
+		font-size: 11vw ;
+
+	}
+
+	#certButton{
+		position: relative;
+		right: 20px;
+		margin:20px;
+		padding: 10px;
+		font-size: 2.9vw;
+
+	}
+
+	#certText{
+		position: relative;
+		right: 40px;
+		font-size: 3vw;
+		line-height: 17px;
+		margin-bottom: 0px;
+	}
+
+}
