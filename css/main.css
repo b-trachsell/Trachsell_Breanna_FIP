@@ -71,11 +71,14 @@
 }
 
 #headerLogo{
-	
 	height: 300px;
-
 	margin: 40px auto 0px; 
 
+}
+
+#headerLogo:hover{
+	transform: translate(0, -1px);
+	filter: brightness(0) saturate(100%) invert(80%) sepia(77%) saturate(1105%) hue-rotate(332deg) brightness(452%) contrast(100%);
 }
 
 #headerNav {
@@ -288,7 +291,106 @@
 
 /*........................................index End...............................................*/
 
+/*........................................About Start...............................................*/
 
+#aboutHeadline1{
+padding:5vw 15vw;
+	background-color: #3c3a35;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+}
+
+#headlineText .aboutheadline1:first-child{
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Galada', cursive;
+	color: #f3ecde;
+
+}
+
+#aboutHeader{
+	font-family: 'Oswald', sans-serif;
+	font-size:30px;
+	padding-bottom: 35px;
+}
+
+#aboutBody{
+	margin: 20px 20vw;
+}
+
+#moreButton{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;}
+
+#moreButton p {
+	font-family: 'Oswald', sans-serif;
+	font-size: 	22px;
+	padding: 10px 10px 10px 135px;
+}
+
+#contactButton{
+	text-decoration:none;
+	padding: 10px;
+	border-color: ;
+	border-radius: 
+}
+
+#aboutBody p {
+	padding-bottom: 15px;
+}
+
+.aboutheadline1{
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+	padding-top: 10px;
+	color: #f3ecde;
+}
+
+#aboutheadline2{
+	font-size: 35px;
+	text-align: center;
+	margin-top:8px;
+	margin-bottom: 10px;
+	font-family: 'Oswald', sans-serif;
+	color:#ffbd2e;
+
+
+}
+
+#Foodland{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: 	red;
+	padding: 0px 150px;
+	height: 100px;
+}
+
+#foodLandHead{
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	padding: 20px 20px 0;
+}
+
+#foodlandText{
+	font-size: 10px;
+	padding: 0px 20px;
+
+}
+
+#foodlandLeft{
+	position: relative;
+	bottom: 50px;
+	height: 100%;
+	width: 205px;
+}
+
+
+
+/*........................................About End...............................................*/
 
 
 /*................................Footer all pages................................................*/
@@ -313,6 +415,8 @@
 
 }
 
+
+
 .footerNav{
 	display: flex;
 	flex-direction: row;
@@ -334,6 +438,7 @@
 /*..............................Footer all pages End...............................................*/
 
 @media screen and (max-width: 830px){
+
 
 	#headlineImages img:last-child {
 		display: none;
@@ -408,9 +513,7 @@
 
 @media screen and (max-width: 650px){
 
-	#hamburgerMenu  .imgButtons{
-		margin-top:50px;
-	}
+	
 
 	.headerButton{
 		 font-size: 16px;
@@ -493,4 +596,8 @@
 		margin-bottom: 0px;
 	}
 
+	#footerCopyR{
+		display: none;
+	}
+	
 }
