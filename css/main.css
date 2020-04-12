@@ -66,7 +66,7 @@
 	align-items: center;
 	height:392px;
 	width: auto;
-	background-image: url("../images/heroCrackedOpen.jpg");
+	background-color:  rgba(60, 58, 53, 0.5);
 	margin-bottom:20px;
 }
 
@@ -131,7 +131,7 @@
 
 /*................Index..................Index..................Index.....................*/
 #adHeadline1{
-	padding:5vw 15vw;
+	padding:5vw 12vw;
 	background-color: #3c3a35;
 	display: flex;
 	flex-direction: row;
@@ -188,15 +188,19 @@
 }
 
 #headlineImages img{
-	max-width: 18vw;
-	width:100%;
+	max-height: 30vw;
+	
+}
+
+#headlineImages img:first-child{
+	display: none;
 }
 
 #adHeadline2{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	margin: 0px 150px;
+	margin: 0px 120px;
 }
 
 #adButton {
@@ -232,7 +236,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 510px;
+	width: 50vw;
 	text-align: right;
 
 }
@@ -409,27 +413,73 @@ padding:5vw 15vw;
 	width: 28vw;
 	padding: 15px;
 	margin:15px;
-	background-color:  rgba(243, 236, 222, 0.5);
+	background-color:  rgba(243, 236, 222, 0.3);
 	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
 .productSection:hover{
-	background-color:  rgba(243, 236, 222, 0.7);
+	background-color:  rgba(243, 236, 222, 0.2);
+
 	transform: translate(0, -1px);
 
 }
 
+.productSection:hover .productTitle{
+	color: #8c8a85;
+}
+
 .productTitle{
 	font-family: 'Oswald', sans-serif;
-	color: #f3ecde;
-	font-size: 5vw;
+	color: #3c3a35;
+	font-size: 4vw;
 }
 
 .productDesc{
 	font-family: 'Merriweather', serif;
 	color: #ffbd2e;
+	padding: 20px 5vw ;
+	line-height: 12px;
 	font-size: 1.2vw;
 }
+
+.bottleimg{
+	max-width: 6vw;
+}
+
+#productsPopUp{
+	display: none;
+	position: fixed;
+	padding: 10px 20px 20px;
+	height: 60vw;
+	width: 60vh;
+	top:0;
+	left:0;
+	right: 0;
+	margin: 100px auto;
+	background-color: #3c3a35;
+	border-radius: 25px;
+	border:solid 2px white;
+	text-align: center;
+	z-index: 50;
+
+}
+
+.openPopUp{
+	display: inline;
+}
+
+/*#popUpBG{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+  	top: 0;
+  	z-index: 4;
+}*/
 
 
 /*........................................Products End...............................................*/
@@ -442,7 +492,7 @@ padding:5vw 15vw;
 	justify-content: space-between;
 	align-items: center;
 	height: 180px;
-	background-color: #343434;
+	background-color: #3c3a35;
 	padding: 25px;
 	margin-top:100px;
 }
@@ -455,6 +505,7 @@ padding:5vw 15vw;
 	padding-left: 35px;
 
 }
+
 
 
 
@@ -485,12 +536,14 @@ padding:5vw 15vw;
 		display: none;
 	}
 
-	#headlineImages img{
-		max-width:28vw;
+	#headlineImages img:first-child {
+		display: block;
+		max-height: 41vw;
 	}
 
+
 	#adHeadline1{
-		padding:5vw 9vw;
+		padding: 2vw 9vw;
 	}
 
 	#topBar{
@@ -552,6 +605,20 @@ padding:5vw 15vw;
 
 	}
 
+	.productTitle{
+		font-size: 7vw;
+	}
+
+	.productDesc{
+		font-size: 1.8vw;
+		line-height: 14px;
+	}
+
+	.bottleimg{
+		max-width: 13vw;
+	}
+
+
 	.footerNav{
 		margin:auto;
 	}
@@ -574,7 +641,7 @@ padding:5vw 15vw;
 		flex-direction: column-reverse;
 		justify-content: flex-end;
 		height: 85vw;
-		padding: 20px;
+		padding: 20px 20px 35vw;
 
 
 	}
@@ -596,17 +663,17 @@ padding:5vw 15vw;
 
 	#headlineImages{
 		margin:auto;
-		margin-top: 40px;
+		margin-top: 10vw;
 	}
 
-	#headlineImages img{
-		max-width: 50vw;
+	#headlineImages img:first-child{
+		max-height: 90vw;
 	}
 
 	#adButton{
 		position: relative;
-		bottom: 53vw;
-		left: 10vw;
+		bottom: 82vw;
+		left: 12vw;
 		font-size: 4vw;
 		color: #f3ecde;
 		border-color: #f3ecde;
@@ -617,7 +684,7 @@ padding:5vw 15vw;
 	}
 
 	#certifications{
-		padding: 0 5vw;
+		padding: 0 2vw;
 	}
 
 	#qualitySafe{
@@ -631,7 +698,7 @@ padding:5vw 15vw;
 
 	#certButton{
 		position: relative;
-		right: 20px;
+		right: 5px;
 		margin:20px;
 		padding: 10px;
 		font-size: 2.9vw;
@@ -640,7 +707,7 @@ padding:5vw 15vw;
 
 	#certText{
 		position: relative;
-		right: 40px;
+		right: 25px;
 		font-size: 3vw;
 		line-height: 17px;
 		margin-bottom: 0px;
@@ -650,7 +717,17 @@ padding:5vw 15vw;
 		width:100vw;
 	}
 
+	.bottleimg{
+		max-width: 20vw;
+	}
 
+	.productTitle{
+		font-size: 9vw;
+	}
+
+	.productDesc{
+		font-size:3vw;
+	}
 
 	#footerCopyR{
 		display: none;
