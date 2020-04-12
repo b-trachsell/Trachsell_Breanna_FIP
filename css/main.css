@@ -332,14 +332,18 @@
 #moreButton p {
 	font-family: 'Oswald', sans-serif;
 	font-size: 	22px;
-	padding: 10px 10px 10px 135px;
+	padding: 10px 10px 10px 13vw;
 }
 
 #contactButton{
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size: 2.2vw;
 	text-decoration:none;
 	padding: 10px;
-	border-color: ;
-	border-radius: 
+	color:#3c3a35;
+	border-radius: 15px;
+	border:2px dashed #3c3a35;
 }
 
 #aboutBody p {
@@ -370,28 +374,30 @@
 	justify-content: space-between;
 	background-color: 	#3c3a35;
 	padding: 10px 20vw;
-	/*color:#f3ecde;*/
-	color:red;
+	max-height: 130px;
 	
 }
 
 #foodLandHead{
 	font-family: 'Oswald', sans-serif;
-	font-size: 30px;
+	color: #32B34B;
+	font-size: 4vw;
 	padding:  20px ;
 }
 
 #foodlandText{
-	font-size: 10px;
+	font-size: 0.8vw;
 	padding: 0px 20px;
+	color:  #f3ecde;
+	font-family: 'Merriweather', serif;
 
 }
 
 #foodlandLeft{
 	position: relative;
-	bottom: 50px;
+	bottom: 70px;
 	height: 100%;
-	width: 205px;
+	width: 15vw;
 }
 
 
@@ -611,7 +617,7 @@
 .formHeader{
 	font-family: 'Oswald', sans-serif;
 	font-size: 5vw;
-	padding: 8px;
+	padding: 45px 8px;
 	color: #3c3a35;
 	display: inline;
 
@@ -625,7 +631,10 @@
 	margin:5px;
 	font-family: 'Merriweather', serif;
 	font-size: 1.4vw;
+	padding: 12px 0 8px;
+
 }
+	
 
 #submitButton{
 	font-family: 'Oswald', sans-serif;
@@ -792,6 +801,37 @@
 		max-width: 13vw;
 	}
 
+	#aboutBody{
+	margin: 20px 10vw;
+	}
+
+	#Foodland{
+
+	padding: 20px 10vw;
+	}
+
+	#foodLandHead{
+		font-size: 6vw;
+	}
+
+	#foodlandText{
+		font-size: 1.5vw
+	}
+
+	#foodlandLeft{
+	width: 40vw;
+	}
+
+	#moreButton p {
+	font-size: 	16px;
+	position: relative;
+	left: 10vw;
+}
+
+
+	.formSection p{
+		font-size: 2vw;
+	}
 
 	.footerNav{
 		margin:auto;
@@ -953,6 +993,10 @@
 	#productsBenefits p{
 		font-size: 2.5vw;
 		padding: 3px;
+	}
+
+	.formSection p{
+		font-size: 3vw;
 	}
 
 	#footerCopyR{
