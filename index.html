@@ -12,10 +12,30 @@
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
 	<div id="siteContainer">
 		<h1 hidden> Home </h1>
-		<div id="topBar"></div>
+		<div id="topBar">
+			<div id="hamburger">
+				<div class="lines"></div>
+				<div class="lines"></div>
+				<div class="lines"></div>
+			</div>
+		</div>
+		<div id="hamburgerMenu">
+				<div class="imgButtons">
+					<a href="about.html" class="headerButton"> About Us</a>
+				</div>
+				<div class="imgButtons">
+					<a href="products.html" class="headerButton"> Our Products</a>
+				</div>
+				<div class="imgButtons">
+					<a href="contact.html" class="headerButton">Contact Us</a>
+				</div>
+				<div class="imgButtons">
+					<a href="quality.html" class="headerButton">Quality</a>
+				</div>
+		</div>
 		<header id="header">
 			<h2 hidden> Header </h2>
-			<img src="images/LogoWhiteT.svg" id="headerLogo" alt="brandLogo">
+			<a href="index.html"><img src="images/LogoWhiteT.svg" id="headerLogo" alt="brandLogo"></a>
 		</header>
 		<nav id="imgCycler">
 				<h2 hidden> Image Cycle Buttons/ Divider Bar </h2>
@@ -36,8 +56,9 @@
 		<section id="adHeadline1"> 
 			<h2 hidden> Headline / New Product Advertising </h2>
 			<div id="headlineImages">
-				<img src="images/canPlaceHolder.png" alt="image of two cans of egg">
-				<img src="images/bottlePlaceHolder.png" alt="image of a bottle of egg, next to several loose eggs">
+				<img src="images/indexBottlesSmall.png" alt="two bottles">
+				<img src="images/indexBottles.png" alt="image of several bottles, and two loose eggs">
+
 			</div>
 			
 			<div id="headlineText">
@@ -47,7 +68,7 @@
 			</div>
 		</section>
 		<div id="adHeadline2">
-			<a id="adButton" href="products"> chick them out! </a>
+			<a id="adButton" href="products.html"> chick them out! </a>
 		</div>
 
 		<section id="certifications">
@@ -66,23 +87,30 @@
 
 		<footer id="footer">
 			<h2 hidden> Footer </h2>
-			<nav class="footerNav">
-				<h2 hidden> Footer Nav 1</h2>
-				<div class="footerNavButtons">
+				
+				<nav class="footerNav">
+
+					<h2 hidden> Footer Nav 1</h2>
+					<div class="footerNavButtons">
+					</div>
+					<div class="footerNavButtons">
+					</div>
+				</nav>
+				<img src="images/LogoWhiteT.svg" id="footerLogo" alt="image of the brand logo">
+				<nav class="footerNav">
+					<h2 hidden> Footer Nav 2</h2>
+					<div class="footerNavButtons">
+					</div>
+					<div class="footerNavButtons">
+					</div>	
+				</nav>
+				<div id="footerCopyR">
+					©2020 Grey Ridge Egg Farms
+					An L.H. Gray and Breanna and Son Company
 				</div>
-				<div class="footerNavButtons">
-				</div>
-			</nav>
-			<img src="images/LogoWhiteT.svg" id="footerLogo" alt="image of the brand logo">
-			<nav class="footerNav">
-				<h2 hidden> Footer Nav 2</h2>
-				<div class="footerNavButtons">
-				</div>
-				<div class="footerNavButtons">
-				</div>	
-			</nav>
+
 		</footer>
 	</div>
-
+<script src="js/main.js"> </script>
 </body>
 </html>

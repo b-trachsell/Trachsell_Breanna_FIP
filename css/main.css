@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #siteContainer{
-	max-width:auto;
+	max-width: 1920px;
 	background-color: #f3ecde;
 	padding:0px;
 }
@@ -9,8 +9,55 @@
 /*.................................Header All Pages................................*/
 #topBar{
 	width: auto;
-	height:35px;
+	height: 9vh;
 	background-color:#3c3a35;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	z-index: 5;
+}
+
+#hamburger{
+	
+	padding: 2px;
+	padding-right: 6px;
+	display: none;
+
+}
+
+#hamburger:hover {
+	cursor: pointer;
+}
+
+
+#hamburger:hover .lines{
+	background-color: #ffbd2e;
+}
+
+.lines{
+	background-color: #f3ecde;
+	width: 30px;
+	height: 5px;
+	margin:  3px 5px;
+
+}
+
+#hamburgerMenu{
+	position: fixed;
+	z-index: 5;
+	left: auto;
+	right: 0px;
+	bottom: 0;
+	height: 91vh;
+	width: 300px;
+	background-color: #f3ecde;
+
+}
+
+#hamburgerMenu .imgButtons{
+	display: flex;
+	text-align: center;
 }
 
 #header{
@@ -19,16 +66,19 @@
 	align-items: center;
 	height:392px;
 	width: auto;
-	background-image: url("../images/heroCrackedOpen.jpg");
+	background-color:  rgba(60, 58, 53, 0.5);
 	margin-bottom:20px;
 }
 
 #headerLogo{
-	
 	height: 300px;
-
 	margin: 40px auto 0px; 
 
+}
+
+#headerLogo:hover{
+	transform: translate(0, -1px);
+	filter: brightness(0) saturate(100%) invert(80%) sepia(77%) saturate(1105%) hue-rotate(332deg) brightness(452%) contrast(100%);
 }
 
 #headerNav {
@@ -42,14 +92,15 @@
 .headerButton  {
 
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: center;
 	margin:auto;
 	color:  #f3ecde;
 	font-family: 'Merriweather', serif;
-	font-size: 1.4vw;
-	padding:10px;
-	margin-left: 40px;
-	margin-right: 40px;
+	font-size: 16px;
+	padding:9px;
+	margin-left: 4vw;
+	margin-right: 4vw;
 	text-decoration:none;
 
 }
@@ -80,7 +131,7 @@
 
 /*................Index..................Index..................Index.....................*/
 #adHeadline1{
-	padding:5vw 15vw;
+	padding:5vw 12vw;
 	background-color: #3c3a35;
 	display: flex;
 	flex-direction: row;
@@ -137,15 +188,19 @@
 }
 
 #headlineImages img{
-	max-width: 18vw;
-	width:100%;
+	max-height: 30vw;
+	
+}
+
+#headlineImages img:first-child{
+	display: none;
 }
 
 #adHeadline2{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	margin: 0px 150px;
+	margin: 0px 120px;
 }
 
 #adButton {
@@ -167,7 +222,7 @@
 }
 
 #certifications{
-	background-image: url("../images/quality.jpg");
+	background-color: #3c3a35;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -181,7 +236,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 510px;
+	width: 50vw;
 	text-align: right;
 
 }
@@ -236,64 +291,381 @@
 
 
 
-@media screen and (max-width: 830px){
 
-	#headlineImages img:last-child {
-		display: none;
-	}
-
-	#headlineImages img{
-		max-width:28vw;
-	}
-
-	#adHeadline1{
-		padding:5vw 9vw;
-	}
-
-
-
-
-	#imgCycler{
-		flex-direction: column;
-		animation-duration: 2s;
-		animation-name: navSlider; 
-	}
-
-	.imgButtons{
-		animation-duration: 2s;
-		/*animation-name: navSlider;*/
-	}
-
-
-	@keyframes navSlider{
-	from {
-		height: 0%;
-
-	}
-
-	to {
-		height: 100%;
-	}
-	}
-
-	.headerButton{
-		font-size: 2.5vw;
-		text-align: center;
-	}
-
-
-
-
-}
-
-@media screen and (max-width: 650px){
-
-}
 
 /*........................................index End...............................................*/
 
+/*........................................About Start...............................................*/
+
+#aboutHeadline1{
+	padding:5vw 15vw;
+	background-color: #3c3a35;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+}
+
+#headlineText .aboutheadline1:first-child{
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Galada', cursive;
+	color: #f3ecde;
+
+}
+
+#aboutHeader{
+	font-family: 'Oswald', sans-serif;
+	font-size:30px;
+	padding-bottom: 35px;
+}
+
+#aboutBody{
+	margin: 20px 20vw;
+}
+
+#moreButton{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;}
+
+#moreButton p {
+	font-family: 'Oswald', sans-serif;
+	font-size: 	22px;
+	padding: 10px 10px 10px 13vw;
+}
+
+#contactButton{
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size: 2.2vw;
+	text-decoration:none;
+	padding: 10px;
+	color:#3c3a35;
+	border-radius: 15px;
+	border:2px dashed #3c3a35;
+}
+
+#aboutBody p {
+	padding-bottom: 15px;
+}
+
+.aboutheadline1{
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+	padding-top: 10px;
+	color: #f3ecde;
+}
+
+#aboutheadline2{
+	font-size: 35px;
+	text-align: center;
+	margin-top:8px;
+	margin-bottom: 10px;
+	font-family: 'Oswald', sans-serif;
+	color:#ffbd2e;
 
 
+}
+
+#Foodland{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: 	#3c3a35;
+	padding: 10px 20vw;
+	max-height: 130px;
+	
+}
+
+#foodLandHead{
+	font-family: 'Oswald', sans-serif;
+	color: #32B34B;
+	font-size: 4vw;
+	padding:  20px ;
+}
+
+#foodlandText{
+	font-size: 0.8vw;
+	padding: 0px 20px;
+	color:  #f3ecde;
+	font-family: 'Merriweather', serif;
+
+}
+
+#foodlandLeft{
+	position: relative;
+	bottom: 70px;
+	height: 100%;
+	width: 15vw;
+}
+
+
+
+/*........................................About End...............................................*/
+
+/*........................................Products Start...............................................*/
+
+#productheadline1{
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Galada', cursive;
+	color: #f3ecde;
+}
+
+#productheadline1 span{
+	color: #ffbd2e;
+}
+
+#productheadline2{
+	margin-top:20px;
+	font-family: 'Merriweather', serif;
+	color: #f3ecde;
+	font-size: 2vw;
+	line-height: 2.3vw;
+}
+
+
+#productsBody{
+	max-width: 100vw;
+	background-color: #3c3a35;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 70px;
+	padding:50px 13vw;
+}
+
+.productSection{
+	width: 28vw;
+	padding: 15px;
+	margin:15px;
+	background-color:  rgba(243, 236, 222, 0.3);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.productSection:hover{
+	background-color:  rgba(243, 236, 222, 0.2);
+
+	transform: translate(0, -1px);
+
+}
+
+.productSection:hover .productTitle{
+	color: #8c8a85;
+}
+
+.productTitle{
+	font-family: 'Oswald', sans-serif;
+	color: #3c3a35;
+	font-size: 4vw;
+}
+
+.productDesc{
+	font-family: 'Merriweather', serif;
+	color: #ffbd2e;
+	padding: 20px 5vw ;
+	line-height: 12px;
+	font-size: 1.2vw;
+}
+
+.bottleimg{
+	max-width: 6vw;
+}
+
+.productsPopUp{
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	padding: 10px 20px 20px;
+	height: 500px;
+	max-width: 60vw;
+	top:0;
+	left:0;
+	right: 0;
+	margin: 100px auto;
+	background-color: #3c3a35;
+	border-radius: 25px;
+	border:solid 2px white;
+	align-items: flex-end;
+	z-index: 4;
+	justify-content: center;
+
+}
+
+.popUpBG{
+	display: flex;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+  	top: 0;
+  	left:0;
+  	right:0;
+  	z-index: 3;
+}
+
+.hidePopUp{
+	display: none;
+}
+
+#productsName{
+	font-family: 'Oswald', sans-serif;
+	color: #f3ecde;
+	font-size: 6vw;
+	padding: 20px 0;
+}
+
+#productsSubtitle{
+	font-family: 'Oswald', sans-serif;
+	color: #f3ecde;
+	font-size: 3vw;
+	padding: 10px 0;
+}
+
+#productsBenefits{
+	/*display: flex;*/
+	/*flex-direction: row;*/
+}
+
+#productsBenefits p{
+	font-family: 'Merriweather', serif;
+	color: #f3ecde;
+	font-size: 1.5vw;
+	padding: 10px 0;
+
+}
+
+#popUpText{
+	margin:25px;
+}
+
+
+
+
+
+/*........................................Products End...............................................*/
+
+/*........................................Quality Start...............................................*/
+
+#qualityBody{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin:7vw;
+}
+
+
+.qualitySection{
+	width: 40vw;
+	margin:2.3vw;
+	padding:10px;
+	border-radius: 5px;
+	background-color: #3c3a35;
+	color: #f3ecde;
+}
+
+.qualityHead{
+	font-family: 'Oswald', sans-serif;
+	font-size: 5vw;
+	padding: 8px;
+}
+
+.qualityBody{
+
+	font-family: 'Merriweather', serif;
+	font-size: 1.7vw;
+	padding:4px;
+	line-height: 2vw;
+}
+
+#qualityDesc{
+	font-family: 'Merriweather', serif;
+	font-size: 2.2vw;
+	margin: 25px 7vw;
+}
+
+#qualityheadline{
+	padding: 20px;
+	background-color: #3c3a35;
+	}
+#qualityheadline p{
+	color:#f3ecde;
+
+}
+
+
+/*........................................Quality End...............................................*/
+
+/*........................................Contact Start...............................................*/
+
+#contentContact{
+	margin:7vw;
+
+}
+
+#contactSpan{
+	color: #ffbd2e;
+}
+
+
+.formHeader{
+	font-family: 'Oswald', sans-serif;
+	font-size: 5vw;
+	padding: 45px 8px;
+	color: #3c3a35;
+	display: inline;
+
+}
+
+.formSection{
+	padding: 10px;
+}
+
+.formSection p{
+	margin:5px;
+	font-family: 'Merriweather', serif;
+	font-size: 1.4vw;
+	padding: 12px 0 8px;
+
+}
+	
+
+#submitButton{
+	font-family: 'Oswald', sans-serif;
+	width: 100px;
+	margin-top: 2vw ;
+	margin-bottom: 5vw;
+	font-size: 2vw;
+	text-decoration:none;
+	text-align: center;
+	padding: 15px;
+	color:#3c3a35;
+	border-radius: 15px;
+	border:2px dashed #3c3a35 ;
+}
+
+#submitButton:hover{
+	transform: translate(0, -1px);
+	background-color:  rgba(255, 190, 48, 0.2);
+
+}
+
+
+.thankyou{
+	display: none;
+}
+
+.hideSubmit{
+	display: none;
+}
+
+/*........................................Contact End...............................................*/
 
 /*................................Footer all pages................................................*/
 #footer{
@@ -301,11 +673,23 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	height: 180px;
-	background-color: #343434;
+	background-color: #3c3a35;
 	padding: 25px;
 	margin-top:100px;
 }
+
+#footerCopyR{
+	font-size: 12px;
+	line-height: 16px;
+	color: #f3ecde;
+	font-family: 'Merriweather', serif;
+	padding-left: 35px;
+
+}
+
+
 
 
 .footerNav{
@@ -327,3 +711,296 @@
 }
 
 /*..............................Footer all pages End...............................................*/
+
+@media screen and (max-width: 830px){
+
+
+	#headlineImages img:last-child {
+		display: none;
+	}
+
+	#headlineImages img:first-child {
+		display: block;
+		max-height: 41vw;
+	}
+
+
+	#adHeadline1{
+		padding: 2vw 9vw;
+	}
+
+	#topBar{
+		position: fixed;
+		width: 100%;
+	}
+
+	#header{
+		padding-top:  9vh;
+	}
+
+	#imgCycler{
+		height: 45px;
+	}
+
+	.imgButtons{
+		display: none;	}
+
+
+	#hamburger{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.headerButton{
+		font-size: 2.5vw;
+		text-align: center;
+	}
+
+	#certifications{
+		padding: 0 5vw;
+	}
+
+	#qualitySafe{
+		font-size: 7.5vw ;
+	}
+
+	#guareggteed{
+		font-size: 10vw ;
+	}
+
+	#certButton{
+		margin:20px;
+		padding: 10px;
+	}
+
+	#certText{
+		font-size: 2.5vw;
+		line-height: 17px;
+		margin-bottom: 0px;
+	}
+
+	#productsBody{
+		padding:0px;
+	}
+
+	.productSection{
+		width: 39vw;
+
+	}
+
+	.productTitle{
+		font-size: 7vw;
+	}
+
+	.productDesc{
+		font-size: 1.8vw;
+		line-height: 14px;
+	}
+
+	.bottleimg{
+		max-width: 13vw;
+	}
+
+	#aboutBody{
+	margin: 20px 10vw;
+	}
+
+	#Foodland{
+
+	padding: 20px 10vw;
+	}
+
+	#foodLandHead{
+		font-size: 6vw;
+	}
+
+	#foodlandText{
+		font-size: 1.5vw
+	}
+
+	#foodlandLeft{
+	width: 40vw;
+	}
+
+	#moreButton p {
+	font-size: 	16px;
+	position: relative;
+	left: 10vw;
+}
+
+
+	.formSection p{
+		font-size: 2vw;
+	}
+
+	.footerNav{
+		margin:auto;
+	}
+
+
+
+
+}
+
+@media screen and (max-width: 650px){
+
+	
+
+	.headerButton{
+		 font-size: 16px;
+		 margin:auto;
+	}
+
+	#adHeadline1{
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		height: 85vw;
+		padding: 20px 20px 35vw;
+
+
+	}
+
+
+
+	#headlineText p:first-child {
+		margin-bottom:20px;
+	}
+
+	#headlineText p {
+		margin: 3px;
+
+	}
+
+	.headline1{
+		font-size: 8vw;
+	}
+
+	#headlineImages{
+		margin:auto;
+		margin-top: 10vw;
+	}
+
+	#headlineImages img:first-child{
+		max-height: 90vw;
+	}
+
+	#adButton{
+		position: relative;
+		bottom: 82vw;
+		left: 12vw;
+		font-size: 4vw;
+		color: #f3ecde;
+		border-color: #f3ecde;
+	}
+
+	#adButton:hover{
+		background-color: rgba(255, 190, 48, 0.5);
+	}
+
+	#certifications{
+		padding: 0 2vw;
+	}
+
+	#qualitySafe{
+		font-size: 10vw ;
+	}
+
+	#guareggteed{
+		font-size: 11vw ;
+
+	}
+
+	#certButton{
+		position: relative;
+		right: 5px;
+		margin:20px;
+		padding: 10px;
+		font-size: 2.9vw;
+
+	}
+
+	#certText{
+		position: relative;
+		right: 25px;
+		font-size: 3vw;
+		line-height: 17px;
+		margin-bottom: 0px;
+	}
+
+	.productSection{
+		width:100vw;
+	}
+
+	.bottleimg{
+		max-width: 20vw;
+	}
+
+	.productTitle{
+		font-size: 9vw;
+	}
+
+	.productDesc{
+		font-size:3vw;
+	}
+
+	#qualityBody{
+		flex-direction: column;
+		align-items: center;
+		margin: 4vw;
+	}
+
+
+	.qualitySection{
+		width: 60vw;
+	}
+
+
+	.qualityHead{
+		font-size: 9vw;
+	}
+
+	.qualityBody{
+		font-size: 2.8vw;
+		line-height: 3.5vw;
+	}
+
+	.productsPopUp{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#bottlePopup{
+		max-height: 70vw;
+		position: relative;
+		top: 7vw;
+	}
+
+	#popUpText{
+		text-align: center;
+	}
+
+	#productsName{
+		font-size: 7vw;
+		padding: 7px 0;
+	}
+
+	#productsSubtitle{
+		font-size: 3.5vw;
+		padding-bottom: 5px;
+	}
+
+	#productsBenefits p{
+		font-size: 2.5vw;
+		padding: 3px;
+	}
+
+	.formSection p{
+		font-size: 3vw;
+	}
+
+	#footerCopyR{
+		display: none;
+	}
+	
+}
