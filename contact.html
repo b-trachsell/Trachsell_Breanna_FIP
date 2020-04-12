@@ -58,40 +58,46 @@
 			
 			<div id="headlineText">
 				<p class="aboutheadline1">Questions? Comments? Concerns?</p>
-				<p class="aboutheadline1"> We're Eggcelent listeners.</p>
+				<p class="aboutheadline1"> We're <span id="contactSpan">Eggcelent</span> listeners.</p>
 			</div>
 		</section>
 
-		<section class="contentContact">
+		<section id="contentContact">
         <h2 hidden> Contact Form </h2>
-            <div id="formSection"> 
-            	<h2 id="formHeader"> First, tell us about yourself </h2>
+        <form id="contactForm" action="form.php" method="post">
+        	<h2 class="formHeader"> First, tell us about yourself </h2>
+            	<div class="formSection"> 
+            	
 						<p class="formLabel">Name: </p>
                         <input type="text" required size="30" placeholder="Enter Your Name" class="formItem">
                         <p class="formLabel">Email: </p>
-                        <input type="email" required size="30" placeholder="Enter Your Name" class="formItem">
+                        <input type="email" required size="30" placeholder="Enter Your Email" class="formItem">
                         <p class="formLabel">Adress: </p>
-                        <input type="text" required size="30" placeholder="Enter Your Name" class="formItem">
+                        <input type="text" required size="30" placeholder="Enter Your Adress" class="formItem">
                         <p class="formLabel">City: </p>
-                        <input type="text" required size="30" placeholder="Enter Your Name" class="formItem">
+                        <input type="text" required size="30" placeholder="Enter Your City
+                        " class="formItem">
                         <p class="formLabel">Country: </p>
-                        <input type="text" required size="30" placeholder="Enter Your Name" class="formItem">
+                        <input type="text" required size="30" placeholder="Enter Your Country" class="formItem">
                         <p class="formLabel">Postal Code: </p>
-                        <input type="text" required size="30" placeholder="Enter Your Name" class="formItem">
+                        <input type="text" required size="30" placeholder="Enter Your Postal Code" class="formItem">
                         <p class="formLabel">Phone Number: </p>
-                        <input type="number" required size="30" placeholder="Enter Your Name" class="formItem">
+                        <input type="number" required size="30" placeholder="Enter Your Phone Number" class="formItem">
                         <p class="formLabel">Company Name: </p>
-                        <input type="text" required size="30" placeholder="Enter Your Name" class="formItem">
-            </div>
-            <form id="contactForm" action="form.php" method="post">
-            	<h2 id="formHeader"> Next, tell us how we can help you </h2>
+                        <input type="text" required size="30" placeholder="Enter Your Company Name" class="formItem">
+           		</div>
+            <h2 class="formHeader"> Next, tell us how we can help you </h2>
+            	<div class="formSection">
+            	
             			<p class="formLabel">Subject: </p>
-                        <input type="text" required size="30" placeholder="Enter Your Name" class="formItem">
+                        <input type="text" required size="30" placeholder="Subject of your message" class="formItem">
 
-                        <p class="formLabel">Describe your question comment or concern. Please use as much detail as you can.: </p>
+                        <p class="formLabel">Describe your question comment or concern. Please use as much detail as you can: </p>
                         <textarea required cols="50" rows="8" class="formItem" placeholder="Your Message Here"></textarea>
-                        
-                    </form>
+            	</div>
+            </form>
+            <div id="submitButton"> Submit </div>
+            <div class="formHeader thankyou" >Thank you for your feedback! </div>
         </section>
 
 		
